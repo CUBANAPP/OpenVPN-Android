@@ -13,8 +13,8 @@ public class RemoteExampleApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        if (BuildConfig.BUILD_TYPE.equals("debug"))
-            enableStrictModes();
+        /*if (BuildConfig.BUILD_TYPE.equals("debug"))
+            enableStrictModes();*/
 
     }
     private void enableStrictModes() {

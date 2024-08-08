@@ -14,9 +14,10 @@ plugins {
 android {
     buildFeatures {
         aidl = true
+		buildConfig = true
     }
     namespace = "de.blinkt.openvpn"
-    compileSdk = 35
+    compileSdk = 34
     //compileSdkPreview = "UpsideDownCake"
 
     // Also update runcoverity.sh
@@ -24,19 +25,22 @@ android {
 
     defaultConfig {
         minSdk = 21
-        targetSdk = 35
+        targetSdk = 34
         //targetSdkPreview = "UpsideDownCake"
         versionCode = 207
         versionName = "0.7.52"
         externalNativeBuild {
             cmake {
-                //arguments+= "-DCMAKE_VERBOSE_MAKEFILE=1"
+                arguments+= "-DCMAKE_VERBOSE_MAKEFILE=1"
             }
         }
     }
+	dependenciesInfo {
+        includeInApk = true
+        includeInBundle = false
+    }
 
-
-    //testOptions.unitTests.isIncludeAndroidResources = true
+    testOptions.unitTests.isIncludeAndroidResources = true
 
     externalNativeBuild {
         cmake {
@@ -231,6 +235,7 @@ android.applicationVariants.all(object : Action<ApplicationVariant> {
 
 dependencies {
     // https://maven.google.com/web/index.html
+    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementation(libs.androidx.annotation)
     implementation(libs.androidx.core.ktx)
 

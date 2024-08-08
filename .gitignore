@@ -17,6 +17,7 @@ cache.properties
 # User-specific configurations
 .idea
 *.iml
+*.jks
 
 main/openvpn3
 
