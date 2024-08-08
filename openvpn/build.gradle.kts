@@ -8,7 +8,7 @@ plugins {
 android {
     namespace = "net.openvpn.ovpn3"
     compileSdk = 35
-    ndkVersion = "26.3.11579264"
+    ndkVersion = "27.0.12077973"
     buildFeatures {
         buildConfig = true
     }
