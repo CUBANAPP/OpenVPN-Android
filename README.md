@@ -4,6 +4,8 @@ OpenVPN for Android
 
 Forked from (https://github.com/schwabe/ics-openvpn) Project.
 
+Really the only I did was create a new module called "openvpn" as library, moving all main funtions from "main", and compile AAR file. Should work. You need to implement the funtions seeing sourcecode. Anyway on this repository the "main" is the original. So you have there an UI.
+
 
 Description
 ------------
