@@ -1,7 +1,24 @@
 [versions]
-android-gradle-plugin = "8.5.1"
+agp = "8.5.1"
+kotlin = "2.0.10"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+material = "1.12.0"
+constraintlayout = "2.1.4"
+lifecycleLivedataKtx = "2.8.4"
+lifecycleViewmodelKtx = "2.8.4"
+navigationRuntime = "2.7.7"
+desugaring = "2.0.4"
+#wireguard = "1.0.20230706"
+openvpn = "0.7.52"
+material3 = "1.2.1"
+navigationCompose = "2.7.7"
+secretsPlugin = "2.0.1"
+activity = "1.9.1"
 androidx-activity = "1.9.1"
-androidx-annotation = "1.8.1"
+androidx-annotation = "1.8.2"
 androidx-appcompat = "1.7.0"
 android-view-material = "1.12.0"
 androidx-core-ktx = "1.13.1"
@@ -15,31 +32,45 @@ androidx-constraintlayout = "2.1.4"
 androidx-cardview = "1.0.0"
 androidx-recyclerview = "1.3.2"
 androidx-viewpager2 = "1.1.0"
-bouncycastle = "1.69"
+bouncycastle = "1.70"
 mpandroidchart = "v3.1.0"
-kotlin = "1.9.22"
-square-okhttp = "4.10.0"
+square-okhttp = "4.12.0"
 
 # Test
 androidx-test-core = "1.6.1"
-junit = "4.13.2"
-mockito-core = "4.8.1"
-robolectric = "4.10.2"
+mockito-core = "5.12.0"
+robolectric = "4.13"
+testng = "6.9.6"
 
 [libraries]
-android-view-material = { group = "com.google.android.material", name = "material", version.ref = "android-view-material" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
+lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
+navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigationRuntime" }
+navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version.ref = "navigationRuntime" }
+navigation-runtime = { group = "androidx.navigation", name = "navigation-runtime", version.ref = "navigationRuntime" }
+desugar-jdk = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "desugaring" }
+#wireguard-tunnel = { group = "com.wireguard.android", name = "tunnel", version.ref = "wireguard" }
+#openvpn-tunnel = { group = "net.openvpn", name = "openvpn", version.ref = "openvpn" }
+openvpn-tunnel = { group = "net.openvpn", name = "openvpn", version.ref = "openvpn" }
+androidx-material3 = { module = "androidx.compose.material3:material3", version.ref = "material3" }
+#androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+androidx-navigation-runtime-ktx = { module = "androidx.navigation:navigation-runtime-ktx", version.ref = "navigationCompose" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+
 androidx-annotation = { group = "androidx.annotation", name = "annotation", version.ref = "androidx-annotation" }
-androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "androidx-activity"}
 androidx-activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "androidx-activity"}
-androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidx-appcompat" }
 androidx-cardview = { group = "androidx.cardview", name = "cardview", version.ref = "androidx-cardview" }
 androidx-viewpager2 = { group = "androidx.viewpager2", name = "viewpager2", version.ref= "androidx-viewpager2" }
-androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "androidx-constraintlayout" }
 androidx-core-ktx = { group = "androidx.core", name = "core", version.ref = "androidx-core-ktx" }
 androidx-fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "androidx-fragment-ktx" }
 androidx-preference-ktx = { group = "androidx.preference", name = "preference-ktx", version.ref = "androidx-preference-ktx" }
 androidx-webkit = { group = "androidx.webkit", name = "webkit", version.ref = "androidx-webkit" }
-androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "androidx-lifecycle-viewmodel-ktx" }
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "androidx-lifecycle-runtime-ktx" }
 androidx-recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "androidx-recyclerview" }
 androidx-security-crypto = { group = "androidx.security", name = "security-crypto", version.ref = "androidx-security-crypto" }
@@ -54,10 +85,14 @@ square-okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref =
 
 # Test
 androidx-test-core = { group = "androidx.test", name = "core", version.ref = "androidx-test-core" }
-junit = { group = "junit", name = "junit", version.ref = "junit" }
 mockito-core = { group = "org.mockito", name = "mockito-core", version.ref = "mockito-core" }
 robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "robolectric" }
+testng = { group = "org.testng", name = "testng", version.ref = "testng" }
 
 [plugins]
-android-application = { id = "com.android.application", version.ref = "android-gradle-plugin" }
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+secretsPlugin = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "secretsPlugin" } # Assuming version is defined in TOML
+navigation-safeargs ={ id = "androidx.navigation.safeargs", version.ref = "navigationCompose" } # Assuming navigationCompose refers to androidx navigation version

@@ -32,3 +32,5 @@ polaris.yml
 idir
 
 test.local.conf
+/openvpn/.cxx
+/openvpn/src/main/jniLibs

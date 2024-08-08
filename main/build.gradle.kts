@@ -1,4 +1,6 @@
 import com.android.build.gradle.api.ApplicationVariant
+import com.android.build.gradle.internal.attributes.VariantAttr
+import org.jetbrains.kotlin.konan.library.impl.buildLibrary
 
 /*
  * Copyright (c) 2012-2016 Arne Schwabe
@@ -17,15 +19,15 @@ android {
 		buildConfig = true
     }
     namespace = "de.blinkt.openvpn"
-    compileSdk = 34
+    compileSdk = 35
     //compileSdkPreview = "UpsideDownCake"
 
     // Also update runcoverity.sh
-    ndkVersion = "26.3.11579264"
+    ndkVersion = "27.0.12077973"
 
     defaultConfig {
         minSdk = 21
-        targetSdk = 34
+        targetSdk = 35
         //targetSdkPreview = "UpsideDownCake"
         versionCode = 207
         versionName = "0.7.52"
@@ -239,17 +241,17 @@ dependencies {
     implementation(libs.androidx.annotation)
     implementation(libs.androidx.core.ktx)
 
-    uiImplementation(libs.android.view.material)
+    uiImplementation(libs.material)
     uiImplementation(libs.androidx.activity)
     uiImplementation(libs.androidx.activity.ktx)
-    uiImplementation(libs.androidx.appcompat)
+    uiImplementation(libs.appcompat)
     uiImplementation(libs.androidx.cardview)
     uiImplementation(libs.androidx.viewpager2)
-    uiImplementation(libs.androidx.constraintlayout)
+    uiImplementation(libs.constraintlayout)
     uiImplementation(libs.androidx.core.ktx)
     uiImplementation(libs.androidx.fragment.ktx)
     uiImplementation(libs.androidx.lifecycle.runtime.ktx)
-    uiImplementation(libs.androidx.lifecycle.viewmodel.ktx)
+    uiImplementation(libs.lifecycle.viewmodel.ktx)
     uiImplementation(libs.androidx.preference.ktx)
     uiImplementation(libs.androidx.recyclerview)
     uiImplementation(libs.androidx.security.crypto)

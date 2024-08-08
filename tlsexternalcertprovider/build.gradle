@@ -8,12 +8,12 @@ plugins {
 }
 
 android {
-    compileSdkVersion 34
+    compileSdk 35
 
     defaultConfig {
         applicationId "de.blinkt.externalcertprovider"
         minSdkVersion 21
-        targetSdkVersion 34
+        targetSdkVersion 35
         versionCode 1
         versionName "1.0"
 
@@ -29,8 +29,8 @@ android {
     }
 
     compileOptions {
-        targetCompatibility 1.8
-        sourceCompatibility 1.8
+        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_17
     }
     lint {
         abortOnError false
