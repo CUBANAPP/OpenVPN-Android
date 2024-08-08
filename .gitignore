@@ -9,7 +9,6 @@ google-breakpad/
 ovpn3/boost
 polarssl
 local.properties
-gradle.properties
 proguard-project.txt
 build.xml
 cache.properties
@@ -32,3 +31,4 @@ polaris.yml
 idir
 
 test.local.conf
+gradle.properties
