@@ -6,11 +6,12 @@ plugins {
 }
 
 android {
-    namespace = "net.openvpn.ovpn3"
+    namespace = "de.blinkt.openvpn"
     compileSdk = 35
     ndkVersion = "27.0.12077973"
     buildFeatures {
         buildConfig = true
+        aidl = true
     }
     defaultConfig {
         minSdk = 21
@@ -39,4 +40,7 @@ android {
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+    implementation(libs.androidx.annotation.jvm)
+    implementation(libs.appcompat)
+    implementation(libs.androidx.fragment.ktx)
 }
