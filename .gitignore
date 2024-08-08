@@ -34,3 +34,4 @@ idir
 test.local.conf
 /openvpn/.cxx
 /openvpn/src/main/jniLibs
+/openvpn/src/main/cpp/
