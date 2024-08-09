@@ -9,7 +9,7 @@ plugins {
 
 android {
     compileSdk 35
-
+    ndkVersion("27.0.12077973")
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 35

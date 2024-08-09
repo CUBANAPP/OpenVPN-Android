@@ -42,6 +42,9 @@ mockito-core = "5.12.0"
 robolectric = "4.13"
 testng = "6.9.6"
 annotationJvm = "1.8.2"
+coreKtx = "1.6.1"
+junitJunit = "4.12"
+firebaseFirestoreKtx = "25.0.0"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -90,6 +93,9 @@ mockito-core = { group = "org.mockito", name = "mockito-core", version.ref = "mo
 robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "robolectric" }
 testng = { group = "org.testng", name = "testng", version.ref = "testng" }
 androidx-annotation-jvm = { group = "androidx.annotation", name = "annotation-jvm", version.ref = "annotationJvm" }
+core-ktx = { group = "androidx.test", name = "core-ktx", version.ref = "coreKtx" }
+junit-junit = { group = "junit", name = "junit", version.ref = "junitJunit" }
+firebase-firestore-ktx = { group = "com.google.firebase", name = "firebase-firestore-ktx", version.ref = "firebaseFirestoreKtx" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
