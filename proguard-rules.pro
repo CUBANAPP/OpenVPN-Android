@@ -22,16 +22,15 @@
 
 -keepattributes Exceptions,Signature,SourceFile,LineNumberTable
 # Keep file names and line numbers.
-#-renamesourcefileattribute SourceFile
-# Optional: Keep custom exceptions.
--keep public class * extends java.lang.Exception
-#
+-renamesourcefileattribute SourceFile
+-keep public class * extends java.lang.Exception  # Optional: Keep custom exceptions.
 
 -keep class com.google.android.gms.** { *; }
 -keep class com.google.firebase.** { *; }
 
+#-keep class com.chartboost.** { *; }
 
--keep class com.stripe.android.** { *; }
+#-keep class com.stripe.android.** { *; }
 
 
 -keep class com.firebase.** { *; }
@@ -44,5 +43,5 @@
 -dontwarn org.shaded.apache.**
 -dontwarn org.ietf.jgss.**
 
--keep class net.openvpn.** { *; }
--keep class de.blinkt.** { *; }
+-keep class net.openvpn.ovpn3.** { *; }
+-keep class de.blinkt.openvpn.** { *; }
