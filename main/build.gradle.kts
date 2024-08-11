@@ -1,6 +1,4 @@
 import com.android.build.gradle.api.ApplicationVariant
-import com.android.build.gradle.internal.attributes.VariantAttr
-import org.jetbrains.kotlin.konan.library.impl.buildLibrary
 
 /*
  * Copyright (c) 2012-2016 Arne Schwabe
@@ -16,7 +14,7 @@ plugins {
 android {
     buildFeatures {
         aidl = true
-		buildConfig = true
+        buildConfig = true
     }
     namespace = "de.blinkt.openvpn"
     compileSdk = 35
@@ -29,20 +27,17 @@ android {
         minSdk = 21
         targetSdk = 35
         //targetSdkPreview = "UpsideDownCake"
-        versionCode = 207
-        versionName = "0.7.52"
+        versionCode = 208
+        versionName = "0.7.53"
         externalNativeBuild {
             cmake {
-                arguments+= "-DCMAKE_VERBOSE_MAKEFILE=1"
+                //arguments+= "-DCMAKE_VERBOSE_MAKEFILE=1"
             }
         }
     }
-	dependenciesInfo {
-        includeInApk = true
-        includeInBundle = false
-    }
 
-    testOptions.unitTests.isIncludeAndroidResources = true
+
+    //testOptions.unitTests.isIncludeAndroidResources = true
 
     externalNativeBuild {
         cmake {
@@ -237,21 +232,20 @@ android.applicationVariants.all(object : Action<ApplicationVariant> {
 
 dependencies {
     // https://maven.google.com/web/index.html
-    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementation(libs.androidx.annotation)
     implementation(libs.androidx.core.ktx)
 
-    uiImplementation(libs.material)
+    uiImplementation(libs.android.view.material)
     uiImplementation(libs.androidx.activity)
     uiImplementation(libs.androidx.activity.ktx)
-    uiImplementation(libs.appcompat)
+    uiImplementation(libs.androidx.appcompat)
     uiImplementation(libs.androidx.cardview)
     uiImplementation(libs.androidx.viewpager2)
-    uiImplementation(libs.constraintlayout)
+    uiImplementation(libs.androidx.constraintlayout)
     uiImplementation(libs.androidx.core.ktx)
     uiImplementation(libs.androidx.fragment.ktx)
     uiImplementation(libs.androidx.lifecycle.runtime.ktx)
-    uiImplementation(libs.lifecycle.viewmodel.ktx)
+    uiImplementation(libs.androidx.lifecycle.viewmodel.ktx)
     uiImplementation(libs.androidx.preference.ktx)
     uiImplementation(libs.androidx.recyclerview)
     uiImplementation(libs.androidx.security.crypto)
