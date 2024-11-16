@@ -22,9 +22,10 @@
 
 -keepattributes Exceptions,Signature,SourceFile,LineNumberTable
 # Keep file names and line numbers.
--renamesourcefileattribute SourceFile
--keep public class * extends java.lang.Exception  # Optional: Keep custom exceptions.
-
+#-renamesourcefileattribute SourceFile
+# Optional: Keep custom exceptions.
+-keep public class * extends java.lang.Exception
+#
 -keep class com.google.android.gms.** { *; }
 -keep class com.google.firebase.** { *; }
 
